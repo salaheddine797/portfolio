@@ -97,3 +97,24 @@ function sendGmail() {
     window.location.href = `mailto:salahedd.r77@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 }
+
+
+const toggleBtn = document.getElementById("themeToggle");
+
+// load saved theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  if (document.body.classList.contains("light")) {
+    toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "light");
+  } else {
+    toggleBtn.textContent = "🌙";
+    localStorage.setItem("theme", "dark");
+  }
+});

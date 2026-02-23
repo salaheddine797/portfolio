@@ -19,6 +19,7 @@
                 <li><a href="#contact">CONTACT</a> </li>
             </ul>
         </div>
+        <button id="themeToggle" class="theme-btn">🌙</button>
     </nav>
 
 
@@ -27,7 +28,10 @@
     <div class="hero-text">
       <h1>Hi, I’m <span>Salah Eddine</span></h1>
       <h2>Junior Web Developer<br>AND UI/UX DESIGNER.</h2>
-      <button >About me</button>
+<div class="hero-buttons">
+  <button onclick="location.href='#about'">About Me</button>
+  <a href="cv.pdf" download class="btn-cv">Download CV</a>
+</div>
     </div>
 
     <div class="hero-image">
@@ -62,7 +66,6 @@
 
     </div>
 
-  </div>
 </section>
 
 
@@ -70,7 +73,7 @@
   <h2>Contact Me</h2>
 
   <form class="contact-form" id="contactForm">
-    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="name" placeholder="Your Full Name">
     <small class="error" id="nameError"></small>
 
     <input type="text" id="company" placeholder="Company Name">
